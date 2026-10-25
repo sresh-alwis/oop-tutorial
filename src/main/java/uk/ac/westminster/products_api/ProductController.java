@@ -39,6 +39,11 @@ public class ProductController {
         return productService.addProduct(product);
     }
 
+    @PostMapping("/products/digital")
+    public Product addProduct(@RequestBody DigitalProduct product){
+        return productService.addProduct(product);
+    }
+
     @DeleteMapping("/products/{id}")
     public void deleteProduct(@PathVariable Long id){
         productService.deleteProduct(id);
